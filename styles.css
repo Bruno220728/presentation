@@ -1,0 +1,226 @@
+:root {
+    --bg-color: #FFFFFF;
+    --primary-text: #1D1D1F;
+    --secondary-text: #6E6E73;
+    --divider-color: #E5E5E7;
+    --apple-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Base Presentation Override */
+.reveal {
+    background-color: var(--bg-color);
+    font-family: var(--apple-font);
+    color: var(--primary-text);
+}
+
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+    color: var(--primary-text);
+    font-family: var(--apple-font);
+    letter-spacing: -0.015em;
+    text-transform: none;
+    margin: 0;
+}
+
+/* Slide Layouts */
+.content-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Hero Slides */
+.hero-title {
+    font-size: 120px !important;
+    font-weight: 700 !important;
+    line-height: 1.1;
+    margin-bottom: 20px !important;
+}
+
+.hero-title.small {
+    font-size: 80px !important;
+}
+
+.hero-subtitle {
+    font-size: 32px;
+    color: var(--secondary-text);
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.meta-line {
+    font-size: 18px;
+    color: var(--secondary-text);
+    margin-top: 100px;
+}
+
+/* Headlines */
+.section-headline {
+    font-size: 56px !important;
+    font-weight: 600 !important;
+    margin-bottom: 40px !important;
+}
+
+.section-headline-center {
+    font-size: 56px !important;
+    font-weight: 600 !important;
+    margin-bottom: 80px !important;
+    text-align: center;
+}
+
+/* Split Layout */
+.split-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 0 10%;
+}
+
+.split-layout.reversed {
+    flex-direction: row-reverse;
+}
+
+.text-side {
+    flex: 1;
+}
+
+.image-side {
+    flex: 1;
+}
+
+.image-side img {
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f7; /* Apple placeholder gray */
+    border: none;
+    box-shadow: none;
+}
+
+/* Lists */
+.apple-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.apple-list li {
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--secondary-text);
+    margin-bottom: 12px;
+}
+
+.apple-list li::before {
+    content: "•";
+    color: var(--divider-color);
+    margin-right: 15px;
+}
+
+.apple-list.secondary li {
+    font-size: 24px;
+}
+
+.apple-list .emphasis {
+    color: var(--primary-text);
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.apple-list.center {
+    text-align: center;
+}
+
+/* Grids */
+.apple-grid {
+    display: grid;
+    gap: 40px;
+    text-align: center;
+}
+
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.grid-item {
+    padding: 40px 20px;
+    border-top: 1px solid var(--divider-color);
+}
+
+.grid-item h3 {
+    font-size: 21px !important;
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+}
+
+.grid-item p {
+    font-size: 17px;
+    color: var(--secondary-text);
+}
+
+.grid-label {
+    font-size: 21px !important;
+    font-weight: 500;
+    color: var(--primary-text) !important;
+}
+
+/* Market Data / Charts */
+.market-data {
+    display: flex;
+    align-items: flex-end;
+    gap: 100px;
+}
+
+.market-chart-placeholder {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    height: 300px;
+}
+
+.bar {
+    width: 80px;
+    background: var(--primary-text);
+    position: relative;
+}
+
+.bar span {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.bar-1 { height: 150px; opacity: 0.3; }
+.bar-2 { height: 262px; opacity: 1; }
+
+/* Validation Styles */
+.divider {
+    height: 1px;
+    background-color: var(--divider-color);
+    margin: 40px 0;
+}
+
+.wtp-label {
+    font-size: 18px;
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+}
+
+.horizontal {
+    display: flex;
+    gap: 40px;
+}
+
+/* Reveal.js Overrides for Printing */
+@media print {
+    .reveal .slides section {
+        background-color: white !important;
+    }
+}
